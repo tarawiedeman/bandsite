@@ -1,0 +1,11 @@
+
+
+// $font-stack: this is used to declare a font variable 
+// can declare global font in body 
+//@use font via url in scss file directly or declare font stack variable in partial and include 
+
+@font-face {
+font-family:'Avenir Next Regular';
+src:url("../../assets/fonts/"), format:"otf", url("");
+font-weight:400;
+}
