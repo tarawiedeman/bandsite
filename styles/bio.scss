@@ -425,6 +425,8 @@ margin: 0rem;
     
 
     @include tablet{
+    
+        position:relative;
 
     
 
@@ -483,8 +485,9 @@ margin: 0rem;
         max-height:1.25rem;
         max-width: 7.5rem;
         margin:1rem 0rem;
-        display:flex;
-        align-self:start;
+        position:absolute;
+        top:2.25rem;
+        right:2.25rem;
 
     }
 
