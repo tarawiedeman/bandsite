@@ -5,25 +5,21 @@
 //@use font via url in scss file directly or declare font stack variable in partial and include 
 
 @font-face {
-font-family:"Avenir Next Regular";
-src:url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("otf"), url("../../assets/fonts/AvenirNextLTPro.ttf") format("ttf");
-font-weight:400;
+font-family:"Avenir Next";
+src:url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
 font-style:normal;
-font-display: swap;
 }
 
 @font-face {
-font-family:"Avenir Next Demi";
-src:url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("otf"), url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("ttf");
-font-weight:600;
+font-family:"Avenir Next";
+src:url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
 font-style:normal;
-font-display: swap;
 }
 
  @font-face {
-font-family:"Avenir Next Bold";
-src:url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("otf"), url("../../assets/fonts/AvenirNextLTProBold.ttf") format("ttf");
-font-weight:700;
+font-family:"Avenir Next";
+src:url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
 font-style:bold;
-font-display: swap;
 }
+
+//apply avenir next to body and then call font weight in css body 
