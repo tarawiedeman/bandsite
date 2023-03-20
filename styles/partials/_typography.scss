@@ -1,25 +1,21 @@
-
-
-// $font-stack: this is used to declare a font variable 
-// can declare global font in body 
-//@use font via url in scss file directly or declare font stack variable in partial and include 
-
 @font-face {
-font-family:"Avenir Next";
-src:url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
-font-style:normal;
-}
-
-@font-face {
-font-family:"Avenir Next";
-src:url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
-font-style:normal;
-}
-
- @font-face {
-font-family:"Avenir Next";
-src:url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
-font-style:bold;
-}
-
-//apply avenir next to body and then call font weight in css body 
+    font-family: "Avenir Next";
+    src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"),
+      url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Avenir Next";
+    src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"),
+      url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Avenir Next";
+    src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"),
+      url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
+    font-style: bold;
+  }
+  
