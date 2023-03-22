@@ -116,6 +116,7 @@ a:hover {
     min-height: 45rem;
     display: flex;
     flex-direction: row;
+    position: relative;
   }
 }
 
@@ -132,8 +133,9 @@ a:hover {
   line-height: 2rem;
   font-weight: 700;
   padding-bottom: 1rem;
+  padding-top: 1.5rem;
   margin: 0rem 1rem;
-  width: 35%;
+  max-width: 70%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -143,6 +145,7 @@ a:hover {
     line-height: 4.25rem;
     padding-top: 3rem;
     padding-bottom: 2.25rem;
+    padding-top: 3rem;
     margin: 0rem 2.25rem;
   }
 }
@@ -159,7 +162,6 @@ a:hover {
   line-height: 1.375rem;
   font-weight: 600;
   padding-top: 1.5rem;
-  padding-bottom: 1rem;
   margin: 0rem 1rem;
 }
 @media screen and (min-width: 48rem) {
@@ -169,34 +171,32 @@ a:hover {
     font-weight: 600;
     padding-left: 2.25rem;
     padding-top: 3rem;
-    padding-bottom: 2.25rem;
     margin: 0rem;
   }
 }
 
 .iframe {
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1rem;
 }
 @media screen and (min-width: 80rem) {
   .iframe {
     width: 35%;
-    align-self: center;
+    position: absolute;
+    top: 83px;
+    right: 1rem;
   }
 }
 
-.shows {
+.showscontainer {
   margin: 0rem 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
 .showHeader {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
 }
 @media screen and (min-width: 48rem) {
   .showHeader {
@@ -206,6 +206,78 @@ a:hover {
     padding-top: 3rem;
     padding-bottom: 2.25rem;
     margin: 0rem;
+  }
+}
+
+.showcard {
+  padding-bottom: 1rem;
+  border-bottom: 0.15rem;
+  border-bottom-style: solid;
+  border-color: #e1e1e1;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 48rem) {
+  .showcard {
+    flex-direction: row;
+  }
+}
+
+.showdate {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+  margin: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .showdate {
+    margin: 2.25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .showdate {
+    margin: auto;
+  }
+}
+
+.showvenue, .showlocation {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  margin: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .showvenue, .showlocation {
+    margin: 2.25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .showvenue, .showlocation {
+    margin: auto;
+  }
+}
+
+.button {
+  color: #ffffff;
+  font-weight: 700;
+  background-color: #323232;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  border-style: none;
+  margin: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .button {
+    margin: 2.25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .button {
+    width: 9.375rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: auto;
   }
 }
 

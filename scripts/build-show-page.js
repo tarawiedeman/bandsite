@@ -13,17 +13,6 @@
 //   document.querySelector(".hero__header").innerHTML="Queen of Yellow x For The Stings";
 
 
-  let showsContainer = document.querySelector(".showscontainer");
-  let showHeader = document.createElement("h2");
-  showHeader.classList.add("showHeader");
-  showsContainer.appendChild(showHeader);
-  document.querySelector(".showHeader").innerText="Shows";
-
-
-
-
-
-
 const shows = [
   {date: "Mon Sept 06 2021",
   venue: "Ronald Lane",
@@ -58,6 +47,12 @@ const shows = [
 
 }
 ]
+const showsContainer = document.querySelector(".showscontainer");
+const showHeader = document.createElement("h1");
+showHeader.classList.add("showHeader");
+showsContainer.appendChild(showHeader);
+document.querySelector(".showHeader").innerText="Shows";
+
 
 const showslist=document.querySelector(".showslist");
 
@@ -85,7 +80,7 @@ showlocation.innerText= show.location;
 showEl.append(showlocation);
 
 const showbutton=document.createElement("button");
-showbutton.className="showbutton";
+showbutton.className="button";
 showbutton.innerText="BUY TICKETS";
 showEl.append(showbutton);
 
