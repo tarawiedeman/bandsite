@@ -209,7 +209,7 @@ a:hover {
   }
 }
 
-.showcard {
+.showel {
   padding-bottom: 1rem;
   border-bottom: 0.15rem;
   border-bottom-style: solid;
@@ -218,16 +218,37 @@ a:hover {
   flex-direction: column;
 }
 @media screen and (min-width: 48rem) {
-  .showcard {
+  .showel {
     flex-direction: row;
   }
+}
+
+.showcard {
+  flex-direction: column;
+}
+@media screen and (min-width: 48rem) {
+  .showcard {
+    margin: 2.25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .showcard {
+    margin: auto;
+  }
+}
+
+.showsubheader {
+  color: #afafaf;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
 }
 
 .showdate {
   font-size: 0.813rem;
   line-height: 1.125rem;
   font-weight: 600;
-  margin: 1rem;
+  margin: 0rem;
 }
 @media screen and (min-width: 48rem) {
   .showdate {
@@ -244,16 +265,16 @@ a:hover {
   font-size: 0.813rem;
   line-height: 1.125rem;
   font-weight: 400;
-  margin: 1rem;
+  margin: 0rem;
 }
 @media screen and (min-width: 48rem) {
   .showvenue, .showlocation {
-    margin: 2.25rem;
+    margin: 0rem 3rem;
   }
 }
 @media screen and (min-width: 80rem) {
   .showvenue, .showlocation {
-    margin: auto;
+    margin: 0rem auto;
   }
 }
 
@@ -265,11 +286,11 @@ a:hover {
   width: 100%;
   border-radius: 0.25rem;
   border-style: none;
-  margin: 1rem;
+  margin: 1rem 0rem;
 }
 @media screen and (min-width: 48rem) {
   .button {
-    margin: 2.25rem;
+    margin: 2.25rem 0rem;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -277,7 +298,7 @@ a:hover {
     width: 9.375rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    margin: auto;
+    margin: auto 0rem;
   }
 }
 

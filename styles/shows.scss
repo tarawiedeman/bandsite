@@ -213,7 +213,7 @@ a:link {
 
           }
 
-          .showcard{
+          .showel{
             padding-bottom:1rem;
             border-bottom:0.15rem;
             border-bottom-style:solid;
@@ -226,12 +226,33 @@ a:link {
             }
           }
 
+          .showcard{
+            flex-direction:column;
+            
+            @include tablet{
+              margin:2.25rem;
+            }
+
+            @include desktop{
+              margin:auto;
+            }
+          }
+
+          .showsubheader{
+            color:$primary-color-2;
+            font-size: 0.875rem;
+            line-height:1.375rem;
+            font-weight:600;
+
+
+          }
+
           .showdate{
 
             font-size:0.813rem;
             line-height: 1.125rem;
             font-weight:600;
-            margin:1rem;
+            margin:0rem;
 
           @include tablet{
             margin:2.25rem;
@@ -246,14 +267,14 @@ a:link {
             font-size:0.813rem;
             line-height: 1.125rem;
             font-weight:400;
-            margin:1rem;
+            margin:0rem;
 
             @include tablet{
-              margin:2.25rem;
+              margin:0rem 3rem;
             }
   
             @include desktop{
-              margin:auto;
+              margin:0rem auto;
             }
           }
 
@@ -269,10 +290,10 @@ a:link {
             width:100%;
             border-radius:0.25rem;
             border-style: none;
-            margin:1rem;
+            margin:1rem 0rem;
 
             @include tablet{
-              margin:2.25rem;
+              margin:2.25rem 0rem;
             }
   
         
@@ -280,7 +301,7 @@ a:link {
               width:9.375rem;
               padding-left:2rem;
               padding-right:2rem;
-              margin:auto;
+              margin:auto 0rem;
 
             }
 

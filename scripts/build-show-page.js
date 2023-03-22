@@ -50,34 +50,62 @@ const shows = [
 const showsContainer = document.querySelector(".showscontainer");
 const showHeader = document.createElement("h1");
 showHeader.classList.add("showHeader");
-showsContainer.appendChild(showHeader);
+showsContainer.prepend(showHeader);
 document.querySelector(".showHeader").innerText="Shows";
 
 
-const showslist=document.querySelector(".showslist");
+const showslist=document.createElement("div");
+showslist.className="showslist";
+showsContainer.append(showslist);
 
 for (let index = 0; index < shows.length; index++) {
   const show = shows[index];
 
 //the showEl or showcard is the element that contains each date, venue, location and button for a show
-  const showEl=document.createElement("div");
-  showEl.className = "showcard";
+const showEl=document.createElement("div");
+showEl.className = "showel";
 
+const dateshowcard=document.createElement("div");
+dateshowcard.className="showcard";
+showEl.append(dateshowcard);
+
+const dateheader=document.createElement("h2")
+dateheader.className="showsubheader";
+dateheader.innerText="DATE";
+dateshowcard.append(dateheader);
 
 const showdate=document.createElement("h3");
 showdate.className="showdate";
 showdate.innerText= show.date;
-showEl.append(showdate);
+dateshowcard.append(showdate);
+
+const venueshowcard=document.createElement("div");
+venueshowcard.className="showcard";
+showEl.append(venueshowcard);
+
+const venueheader=document.createElement("h2")
+venueheader.className="showsubheader";
+venueheader.innerText="VENUE";
+venueshowcard.append(venueheader);
 
 const showvenue=document.createElement("h3");
 showvenue.className="showvenue";
 showvenue.innerText= show.venue;
-showEl.append(showvenue);
+venueshowcard.append(showvenue);
+
+const locationshowcard=document.createElement("div");
+locationshowcard.className="showcard";
+showEl.append(locationshowcard);
+
+const locationheader=document.createElement("h2")
+locationheader.className="showsubheader";
+locationheader.innerText="LOCATION";
+locationshowcard.append(locationheader);
 
 const showlocation=document.createElement("h3");
 showlocation.className="showlocation";
 showlocation.innerText= show.location;
-showEl.append(showlocation);
+locationshowcard.append(showlocation);
 
 const showbutton=document.createElement("button");
 showbutton.className="button";
