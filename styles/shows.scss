@@ -329,6 +329,10 @@ a:link {
     color: $primary-color-3;
     padding-left: 1rem;
     margin-top: 1rem;
+
+    &__social{
+      pointer-events:none;
+    }
   
     &__header {
       font-weight: 700;
