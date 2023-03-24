@@ -302,7 +302,7 @@ a, a:hover, a:focus, a:active {
   }
 }
 
-.comments {
+.commentbox {
   margin: 0rem 1rem;
 
   @include desktop{
@@ -372,7 +372,7 @@ a, a:hover, a:focus, a:active {
   }
 
   &__commentinput {
-    @extend .comments__nameinput;
+    @extend .commentbox__nameinput;
     padding:3rem;
   }
 }
@@ -427,11 +427,15 @@ a, a:hover, a:focus, a:active {
   }
 }
 
+.usercommentContainer{
+  display:flex;
+  flex-direction: column;
+}
 .commentcard{
   padding-bottom:1rem;
-  border-bottom:0.15rem;
+  border-bottom:0.063rem;
   border-bottom-style:solid;
-  border-top:0.15rem;
+  border-top:0.063rem;
   border-top-style:solid;
   border-color: $secondary-color-2;
   display:flex;
@@ -482,6 +486,8 @@ a, a:hover, a:focus, a:active {
 
   }
 }
+
+
 
 .footer {
   display: flex;

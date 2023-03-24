@@ -1,16 +1,16 @@
 
-const commentscontainer=document.querySelector(".comments");
+const commentscontainer=document.querySelector(".commentbox");
 const commentsheader=document.createElement("h1");
-commentsheader.classList.add("comments__header");
+commentsheader.classList.add("commentbox__header");
 commentscontainer.prepend(commentsheader);
-document.querySelector(".comments__header").innerText="Join the Conversation";
+document.querySelector(".commentbox__header").innerText="Join the Conversation";
 
 const form=document.createElement("form");
 form.classList.add("form");
 commentscontainer.append(form);
 
 const imgrowcontainer=document.createElement("div");
-imgrowcontainer.classList.add("comments__rowcontainer");
+imgrowcontainer.classList.add("commentbox__rowcontainer");
 form.append(imgrowcontainer);
 
 
@@ -21,24 +21,24 @@ imgrowcontainer.append(avatar);
 
 
 const namelabel=document.createElement("label");
-namelabel.classList.add("comments__namelabel");
+namelabel.classList.add("commentbox__namelabel");
 imgrowcontainer.append(namelabel);
-document.querySelector(".comments__namelabel").innerText="NAME";
+document.querySelector(".commentbox__namelabel").innerText="NAME";
 
 const nameinput=document.createElement("input");
-nameinput.classList.add("comments__nameinput");
+nameinput.classList.add("commentbox__nameinput");
 nameinput.setAttribute("placeholder","Enter your name");
 nameinput.setAttribute("name","name");
 form.append(nameinput);
 
 
 const commentlabel=document.createElement("label");
-commentlabel.classList.add("comments__commentlabel");
+commentlabel.classList.add("commentbox__commentlabel");
 form.append(commentlabel);
-document.querySelector(".comments__commentlabel").innerText="COMMENT";
+document.querySelector(".commentbox__commentlabel").innerText="COMMENT";
 
 const commentinput=document.createElement("input");
-commentinput.classList.add("comments__commentinput");
+commentinput.classList.add("commentbox__commentinput");
 commentinput.setAttribute("placeholder","Add a new comment");
 commentinput.setAttribute("name","comment");
 form.append(commentinput);
@@ -77,7 +77,7 @@ const usercomments= [{
 //when button is clicked, clear content, and go to array
 //get into from object push to array and run function
 
-
+const formdata = document.querySelector(".usercommentContainer");
 
 
 const formlistener=document.querySelector("form");
@@ -98,28 +98,31 @@ function callbackFunction(e) {
         comment: commenterscomment,
       });
       console.log(usercomments);
-      displayComment();
       e.target.reset();
+      formdata.innerHTML='';
+      displayComment();
     } else {
       alert ('please enter some text');
     }
   }
 
-  const formdata = e.t;
+  // const formdata = commentersname;
+  // formdata.innerHTML='';
+  //target newly created element 
+  //what are comments inside of
 
   function displayComment(){
-
-  formdata.innerHTML='';
-  //target newly created element 
-  //what are comments inside of 
 
 
   usercomments.forEach (onecomment => {
 
+        
+        // formdata.append();
+
         //create a card
         const commentcard=document.createElement("div");
         commentcard.className="commentcard";
-        form.append(commentcard);
+        formdata.append(commentcard);
 
         //create a row container
         const rowcontainer=document.createElement("div");

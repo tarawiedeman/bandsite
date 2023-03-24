@@ -111,6 +111,11 @@ function() {
 
 }
 
+//use query selector all to select multiple elements and it creates a nodelist (i.e. 6 shows rows). Loop through nodelist and 
+//add an event listener onto each row to wait for a click. In the listener, should be a click and add style (add class for this)
+//and remove this class from other rows. ex. showslist is a var -make it into a node list, loop thorough it, and add an event listener
+//to add a class and remove classes 
+//check out dom review (jons)
 
 //when any other row is clicked on unhighlight above row, and highlight this one
 

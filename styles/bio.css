@@ -318,19 +318,19 @@ a, a:hover, a:focus, a:active {
   }
 }
 
-.comments {
+.commentbox {
   margin: 0rem 1rem;
 }
 @media screen and (min-width: 80rem) {
-  .comments {
+  .commentbox {
     margin: auto;
   }
 }
-.comments__rowcontainer {
+.commentbox__rowcontainer {
   display: flex;
   flex-direction: row;
 }
-.comments__header {
+.commentbox__header {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
@@ -339,7 +339,7 @@ a, a:hover, a:focus, a:active {
   margin: 0rem 1rem;
 }
 @media screen and (min-width: 48rem) {
-  .comments__header {
+  .commentbox__header {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 700;
@@ -349,14 +349,14 @@ a, a:hover, a:focus, a:active {
     margin: 0rem;
   }
 }
-.comments__namelabel {
+.commentbox__namelabel {
   color: #afafaf;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
   margin: 0.25rem;
 }
-.comments__nameinput, .comments__commentinput {
+.commentbox__nameinput, .commentbox__commentinput {
   color: #323232;
   font-size: 0.875rem;
   line-height: 1.375rem;
@@ -372,19 +372,19 @@ a, a:hover, a:focus, a:active {
   width: 100%;
 }
 @media screen and (min-width: 48rem) {
-  .comments__nameinput, .comments__commentinput {
+  .commentbox__nameinput, .commentbox__commentinput {
     height: 3rem;
     padding: 1rem;
   }
 }
-.comments__commentlabel {
+.commentbox__commentlabel {
   color: #afafaf;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
   margin: 0.25rem;
 }
-.comments__commentinput {
+.commentbox__commentinput {
   padding: 3rem;
 }
 
@@ -431,11 +431,16 @@ a, a:hover, a:focus, a:active {
   }
 }
 
+.usercommentContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 .commentcard {
   padding-bottom: 1rem;
-  border-bottom: 0.15rem;
+  border-bottom: 0.063rem;
   border-bottom-style: solid;
-  border-top: 0.15rem;
+  border-top: 0.063rem;
   border-top-style: solid;
   border-color: #e1e1e1;
   display: flex;
