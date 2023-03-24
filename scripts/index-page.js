@@ -16,7 +16,7 @@ form.append(imgrowcontainer);
 
 const avatar=document.createElement("img");
 avatar.classList.add("avatar");
-avatar.setAttribute("src","../assets/images/Mohan-muruge.jpg");
+avatar.src="./assets/images/Mohan-muruge.jpg";
 imgrowcontainer.append(avatar);
 
 
@@ -66,7 +66,54 @@ const usercomments= [{
     comment:"I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
   }];
 
+
+  // function called displayComment() that takes in one comment 
+// object as a parameter and displays it on the page using JavaScript DOM manipulation.
+
+
+
+//event listener also needs to call displayComment and display new comment from form and then it should disappear on page reload 
+//within a function you can clear out existing content with innerHTML ""; 
+//when button is clicked, clear content, and go to array
+//get into from object push to array and run function
+
+
+
+
+const formlistener=document.querySelector("form");
+formlistener.addEventListener('submit',callbackFunction);
+
+
+
+function callbackFunction(e) {
+    e.preventDefault();
+    console.log(e.target.name.value,e.target.comment.value);
+    const commentersname=e.target.name.value;
+    const commenterscomment=e.target.comment.value;
+
+    if (commentersname !== '' && commenterscomment != '') {
+
+      usercomments.push({
+        name: commentersname,
+        comment: commenterscomment,
+      });
+      console.log(usercomments);
+      displayComment();
+      e.target.reset();
+    } else {
+      alert ('please enter some text');
+    }
+  }
+
+  const formdata = e.t;
+
   function displayComment(){
+
+  formdata.innerHTML='';
+  //target newly created element 
+  //what are comments inside of 
+
+
   usercomments.forEach (onecomment => {
 
         //create a card
@@ -79,16 +126,17 @@ const usercomments= [{
         rowcontainer.className="commentcard__rowcontainer";
         commentcard.append(rowcontainer);
 
-        //create a div to hold the avatar 
-        const avatarcontainer=document.createElement("div");
-        avatarcontainer.className="commentcard__avatar";
-        rowcontainer.prepend(avatarcontainer);
-        //THIS DOESN"T WORK
+        // //create a div to hold the avatar 
+        // const avatarcontainer=document.createElement("div");
+        // avatarcontainer.className="avatar";
+        // rowcontainer.prepend(avatarcontainer);
+        // //THIS DOESN"T WORK
 
         //create an avatar
         const useravatar=document.createElement("img");
         useravatar.classList.add("commentcard__avatar");
-        avatarcontainer.append(useravatar);
+        useravatar.src="./assets/images/Mohan-muruge.jpg";
+        rowcontainer.append(useravatar);
 
         //create a name
         const commentersname=document.createElement("h3");
@@ -116,29 +164,17 @@ const usercomments= [{
 }
 displayComment();
 
-// function called displayComment() that takes in one comment 
-// object as a parameter and displays it on the page using JavaScript DOM manipulation.
-
-formdata=[];
 
 
-const formlistener=document.querySelector("form");
-formlistener.addEventListener('submit',callbackFunction);
-console.log('form submitted');
-// above is working 
 
 
-// push form data to object
-
-function callbackFunction(e) {
-    e.preventDefault();
-    allformInfo= new FormData(e.target.name.value,e.target.comment.value);
-    const formsubmission={};
-    allformInfo.forEach((value,key) => (formsubmission[key] = value));
-    console.log(formsubmission);
-
-    // push object to array
-    formdata.push(formsubmission);
 
 
-}
+
+
+
+
+
+
+
+

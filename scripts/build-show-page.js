@@ -1,17 +1,3 @@
-//are we allowed to have the parent already living in our HTML? 
-
-// let hero = document.querySelector(".hero"); 
-//   let heroSubheader = document.createElement("h2"); 
-//   heroSubheader.classList.add('hero__subheader');
-//   hero.appendChild(heroSubheader);
-//   document.querySelector(".hero__subheader").innerHTML="Beautiful Beasts Album";
-
-
-//   let heroHeader = document.createElement("h1"); 
-//   heroHeader.classList.add('hero__header');
-//   hero.appendChild(heroHeader);
-//   document.querySelector(".hero__header").innerHTML="Queen of Yellow x For The Stings";
-
 
 const shows = [
   {date: "Mon Sept 06 2021",
@@ -117,6 +103,16 @@ showslist.append(showEl);
 
 }
 
+//create an onclick function to add class that turns showEl grey? 
+
+Object.onclick = 
+function() {
+  add.className="showElclick"
+
+}
+
+
+//when any other row is clicked on unhighlight above row, and highlight this one
 
 
 

@@ -41,6 +41,9 @@ a, a:hover, a:focus, a:active {
   color: $primary-color-2;
   font-weight: 400;
   padding-bottom: 1rem;
+}
+
+.unselected:hover{
   border-bottom: 0.15rem;
   border-bottom-color: $primary-color-3;
   border-bottom-style: solid;
@@ -98,6 +101,8 @@ a, a:hover, a:focus, a:active {
   padding: 0rem;
   margin: 0rem;
   display: flex;
+  box-shadow: inset 0 0 0 2000px rgba(50,50,50,0.31); 
+  
 
   @include tablet {
     min-height: 32rem;
@@ -313,10 +318,10 @@ a, a:hover, a:focus, a:active {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
-    padding-top: 1rem;
+    padding-top: 0rem;
     padding-bottom: 1rem;
-    margin: 0rem;
-
+    margin: 0rem 1rem;
+  
     @include tablet {
       font-size: 2.25rem;
       line-height: 2.75rem;
@@ -326,11 +331,8 @@ a, a:hover, a:focus, a:active {
       padding-left: 3rem;
       margin: 0rem;
     }
-
-    @include desktop{
-      padding-top:3rem;
-    }
   }
+  
 
   &__namelabel {
     color: $primary-color-2;
@@ -379,11 +381,11 @@ a, a:hover, a:focus, a:active {
   border-radius:50%;
   max-width:2.25rem;
   background-color: $secondary-color-2;
-  // margin:1rem;
+  margin:1rem;
 
   @include tablet{
     max-width:3rem;
-    // margin:2.25rem;
+    margin:2.25rem;
   }
 
   @include desktop{
@@ -461,6 +463,7 @@ a, a:hover, a:focus, a:active {
   }
 
   &__avatar{
+   
     border-radius:50%;
     max-width:2.25rem;
     background-color: $secondary-color-2;

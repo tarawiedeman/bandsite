@@ -1,4 +1,3 @@
-@use "./partials/colors" as *;
 
 @use "./partials/mixins" as *;
 
@@ -35,6 +34,15 @@ body {
   .unselected {
     text-decoration: none;
     color: $primary-color-2;
+    font-weight: 400;
+    padding-bottom: 1rem;
+  }
+
+  .unselected:hover{
+    border-bottom: 0.15rem;
+    border-bottom-color: $primary-color-3;
+    border-bottom-style: solid;
+    color: $primary-color-3;
     font-weight: 400;
     padding-bottom: 1rem;
   }
@@ -84,6 +92,7 @@ body {
     background-image: URL("../assets/images/Photo-gallery-3.jpg");
     background-size: cover;
     background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(50,50,50,0.31); 
     width: 100%;
     min-height: 25rem;
     padding: 0rem;
@@ -162,8 +171,9 @@ body {
 
       .iframe {
         padding:1rem;
+        
 
-        //why is padding or margin not respected around an iframe?
+        
 
         @include desktop {
             width:35%;
@@ -208,7 +218,7 @@ body {
           }
 
           .showel{
-            padding-bottom:1rem;
+            padding:1rem;
             border-bottom:0.15rem;
             border-bottom-style:solid;
             border-color: $secondary-color-2;
@@ -217,8 +227,19 @@ body {
 
             @include tablet{
               flex-direction:row;
+              padding: 1.5rem 1.125rem;
             }
           }
+
+          .showel:hover{
+
+            background-color: $secondary-color-3;
+
+          }
+          .showel:active{
+            background-color: $secondary-color-2;
+          }
+        
 
           .showcard{
             flex-direction:column;
@@ -407,6 +428,7 @@ body {
       &__icons {
         display: flex;
         gap: 1.5rem;
+        padding-top:2.25rem;
       }
   
       &__logo {
