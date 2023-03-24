@@ -20,16 +20,10 @@ body {
 //margin is margin left and right (not up and down)
 //padding is for between components and above/below headers
 
-a:link {
+
+a, a:hover, a:focus, a:active {
   text-decoration: none;
-}
-a:hover {
-  border-bottom: 0.15rem;
-  border-bottom-color: $primary-color-3;
-  border-bottom-style: solid;
-  color: $primary-color-3;
-  font-weight: 400;
-  padding-bottom: 1rem;
+  
 }
 
 .selected {
@@ -39,11 +33,18 @@ a:hover {
   color: $primary-color-3;
   font-weight: 700;
   padding-bottom: 1rem;
+  
 }
 
 .unselected {
   text-decoration: none;
   color: $primary-color-2;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  border-bottom: 0.15rem;
+  border-bottom-color: $primary-color-3;
+  border-bottom-style: solid;
+  color: $primary-color-3;
   font-weight: 400;
   padding-bottom: 1rem;
 }
@@ -438,7 +439,11 @@ a:hover {
   &__rowcontainer{
     display:flex;
     flex-direction:row;
-  }           
+  }        
+  
+  &__avatarcontainer{
+    background-color: $secondary-color-2;
+  }
 
   &__name{
     color: $primary-color-1;
@@ -510,6 +515,11 @@ a:hover {
   &__icons {
     display: flex;
     gap: 1rem;
+
+    @include tablet{
+    padding-top:2.5rem;
+
+    }
   }
 
   &__logo {

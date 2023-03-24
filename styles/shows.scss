@@ -17,16 +17,10 @@ body {
   margin: 0rem;
 }
 
-a:link {
+
+  a, a:hover, a:focus, a:active {
     text-decoration: none;
-  }
-  a:hover {
-    border-bottom: 0.15rem;
-    border-bottom-color: $primary-color-3;
-    border-bottom-style: solid;
-    color: $primary-color-3;
-    font-weight: 400;
-    padding-bottom: 1rem;
+    
   }
   
   .selected {

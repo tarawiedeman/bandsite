@@ -28,6 +28,7 @@ document.querySelector(".comments__namelabel").innerText="NAME";
 const nameinput=document.createElement("input");
 nameinput.classList.add("comments__nameinput");
 nameinput.setAttribute("placeholder","Enter your name");
+nameinput.setAttribute("name","name");
 form.append(nameinput);
 
 
@@ -39,6 +40,7 @@ document.querySelector(".comments__commentlabel").innerText="COMMENT";
 const commentinput=document.createElement("input");
 commentinput.classList.add("comments__commentinput");
 commentinput.setAttribute("placeholder","Add a new comment");
+commentinput.setAttribute("name","comment");
 form.append(commentinput);
 
 const commentbutton=document.createElement("button");
@@ -77,10 +79,16 @@ const usercomments= [{
         rowcontainer.className="commentcard__rowcontainer";
         commentcard.append(rowcontainer);
 
+        //create a div to hold the avatar 
+        const avatarcontainer=document.createElement("div");
+        avatarcontainer.className="commentcard__avatar";
+        rowcontainer.prepend(avatarcontainer);
+        //THIS DOESN"T WORK
+
         //create an avatar
         const useravatar=document.createElement("img");
         useravatar.classList.add("commentcard__avatar");
-        rowcontainer.append(useravatar);
+        avatarcontainer.append(useravatar);
 
         //create a name
         const commentersname=document.createElement("h3");
@@ -108,5 +116,29 @@ const usercomments= [{
 }
 displayComment();
 
-//   function called displayComment() that takes in one comment 
+// function called displayComment() that takes in one comment 
 // object as a parameter and displays it on the page using JavaScript DOM manipulation.
+
+formdata=[];
+
+
+const formlistener=document.querySelector("form");
+formlistener.addEventListener('submit',callbackFunction);
+console.log('form submitted');
+// above is working 
+
+
+// push form data to object
+
+function callbackFunction(e) {
+    e.preventDefault();
+    allformInfo= new FormData(e.target.name.value,e.target.comment.value);
+    const formsubmission={};
+    allformInfo.forEach((value,key) => (formsubmission[key] = value));
+    console.log(formsubmission);
+
+    // push object to array
+    formdata.push(formsubmission);
+
+
+}

@@ -27,17 +27,8 @@ body {
   margin: 0rem;
 }
 
-a:link {
+a, a:hover, a:focus, a:active {
   text-decoration: none;
-}
-
-a:hover {
-  border-bottom: 0.15rem;
-  border-bottom-color: #ffffff;
-  border-bottom-style: solid;
-  color: #ffffff;
-  font-weight: 400;
-  padding-bottom: 1rem;
 }
 
 .selected {
@@ -52,6 +43,12 @@ a:hover {
 .unselected {
   text-decoration: none;
   color: #afafaf;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  border-bottom: 0.15rem;
+  border-bottom-color: #ffffff;
+  border-bottom-style: solid;
+  color: #ffffff;
   font-weight: 400;
   padding-bottom: 1rem;
 }
@@ -447,6 +444,9 @@ a:hover {
   display: flex;
   flex-direction: row;
 }
+.commentcard__avatarcontainer {
+  background-color: #e1e1e1;
+}
 .commentcard__name, .commentcard__comment, .commentcard__date {
   color: #323232;
   font-size: 0.875rem;
@@ -507,6 +507,11 @@ a:hover {
 .footer__icons {
   display: flex;
   gap: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .footer__icons {
+    padding-top: 2.5rem;
+  }
 }
 .footer__logo {
   max-height: 1.25rem;
