@@ -133,7 +133,7 @@ function callbackFunction(e) {
         // const avatarcontainer=document.createElement("div");
         // avatarcontainer.className="avatar";
         // rowcontainer.prepend(avatarcontainer);
-        // //THIS DOESN"T WORK
+        
 
         //create an avatar
         const useravatar=document.createElement("img");
@@ -147,11 +147,11 @@ function callbackFunction(e) {
         commentersname.innerText= onecomment.name;
         rowcontainer.append(commentersname);
 
-        //create a date 
-        const commentdate=document.createElement("h3");
-        commentdate.className="commentcard__date";
-        commentdate.innerText= onecomment.date;
-        rowcontainer.append(commentdate);
+        // //create a date 
+        // const commentdate=document.createElement("h3");
+        // commentdate.className="commentcard__date";
+        // commentdate.innerText= onecomment.date;
+        // rowcontainer.append(commentdate);
 
         //create a comment 
         const usercomment=document.createElement("p");

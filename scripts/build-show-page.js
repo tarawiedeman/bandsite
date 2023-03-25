@@ -105,11 +105,11 @@ showslist.append(showEl);
 
 //create an onclick function to add class that turns showEl grey? 
 
-Object.onclick = 
-function() {
-  add.className="showElclick"
+// Object.onclick = 
+// function() {
+//   add.className="showElclick"
 
-}
+// }
 
 //use query selector all to select multiple elements and it creates a nodelist (i.e. 6 shows rows). Loop through nodelist and 
 //add an event listener onto each row to wait for a click. In the listener, should be a click and add style (add class for this)

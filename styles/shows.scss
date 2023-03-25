@@ -173,13 +173,18 @@ body {
         padding:1rem;
         
 
-        
+        @include tablet{
+          width:26%;
+            position:absolute;
+            top:12rem;
+            right:0rem;
+        }
 
         @include desktop {
             width:35%;
             position:absolute;
-            top:83px;
-            right:1rem;
+            top:15rem;
+            right:2rem;
 
         }
       }
@@ -194,22 +199,24 @@ body {
 
       .showHeader{
 
-            font-size: 1.5rem;
-            line-height: 2rem;
-            font-weight: 700;
-            
-            
-          
-            @include tablet {
-              font-size: 1.5rem;
-              line-height: 1.375rem;
-              font-weight: 600;
-              padding-top: 3rem;
-              padding-bottom: 2.25rem;
-              margin: 0rem;
-            }
-          
-          
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        margin-top: 1.5rem;
+        margin-bottom:1.5rem;
+        margin-left:1rem;
+        margin-right:1rem;
+      
+        @include tablet {
+          font-size: 2.25rem;
+          line-height: 2.75rem;
+          font-weight: 700;
+          margin-top: 3rem;
+        margin-bottom:3rem;
+        margin-left:2.25rem;
+        margin-right:2.25rem;
+        }
+
           }
 
           .showlist{
@@ -298,6 +305,7 @@ body {
           }
 
           .button{
+            font-family:Avenir Next;
             color:$primary-color-3;
             font-weight: 700;
             background-color: $primary-color-1;

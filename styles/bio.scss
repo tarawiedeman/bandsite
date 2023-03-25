@@ -303,7 +303,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .commentbox {
-  margin: 0rem 1rem;
+  
 
   @include desktop{
     margin:auto;
@@ -318,7 +318,7 @@ a, a:hover, a:focus, a:active {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
-    padding-top: 0rem;
+    padding-top: 1.5rem;
     padding-bottom: 1rem;
     margin: 0rem 1rem;
   
@@ -326,7 +326,7 @@ a, a:hover, a:focus, a:active {
       font-size: 2.25rem;
       line-height: 2.75rem;
       font-weight: 700;
-      padding-top: 0rem;
+      padding-top: 3rem;
       padding-bottom: 2.25rem;
       padding-left: 3rem;
       margin: 0rem;
@@ -339,10 +339,12 @@ a, a:hover, a:focus, a:active {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 600;
-    margin: 0.25rem;
+    margin: 0rem;
+    padding:0rem;
   }
 
   &__nameinput {
+    font-family:Avenir Next;
     color: $primary-color-1;
     font-size: 0.875rem;
     line-height: 1.375rem;
@@ -373,15 +375,19 @@ a, a:hover, a:focus, a:active {
 
   &__commentinput {
     @extend .commentbox__nameinput;
-    padding:3rem;
+    padding:0.75rem;
+    text-align:start;
   }
+
+
 }
+
 
 .avatar{
   border-radius:50%;
-  max-width:2.25rem;
+  width:1.8rem;
   background-color: $secondary-color-2;
-  margin:1rem;
+  
 
   @include tablet{
     max-width:3rem;
@@ -393,8 +399,7 @@ a, a:hover, a:focus, a:active {
   }
 }
 .form {
-  margin-left: 2.25rem;
-  margin-right:2.25rem;
+  margin: 0rem 1rem;
   display: flex;
   flex-direction: column;
 
@@ -404,6 +409,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .button {
+  font-family:Avenir Next;
   color: $primary-color-3;
   font-weight: 700;
   background-color: $primary-color-1;
@@ -430,6 +436,7 @@ a, a:hover, a:focus, a:active {
 .usercommentContainer{
   display:flex;
   flex-direction: column;
+  margin: 0rem 1rem;
 }
 .commentcard{
   padding-bottom:1rem;
@@ -447,10 +454,7 @@ a, a:hover, a:focus, a:active {
     flex-direction:row;
   }        
   
-  &__avatarcontainer{
-    background-color: $secondary-color-2;
-  }
-
+  
   &__name{
     color: $primary-color-1;
     font-size: 0.875rem;
@@ -469,9 +473,13 @@ a, a:hover, a:focus, a:active {
   &__avatar{
    
     border-radius:50%;
-    max-width:2.25rem;
+    width:1.8rem;
+    height:1.8rem;
     background-color: $secondary-color-2;
-    margin-right:0rem;
+    padding:1rem;
+    margin-top:0.6rem;
+    margin-right:0.6rem;
+    height:1.8rem;
 
     @include tablet{
     max-width:3rem;
@@ -482,7 +490,7 @@ a, a:hover, a:focus, a:active {
   &__comment{
     @extend .commentcard__name;
     font-weight:400;
-    margin:0rem;
+    margin-left:2.4rem;
 
   }
 }

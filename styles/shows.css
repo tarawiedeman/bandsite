@@ -182,12 +182,20 @@ a, a:hover, a:focus, a:active {
 .iframe {
   padding: 1rem;
 }
+@media screen and (min-width: 48rem) {
+  .iframe {
+    width: 26%;
+    position: absolute;
+    top: 12rem;
+    right: 0rem;
+  }
+}
 @media screen and (min-width: 80rem) {
   .iframe {
     width: 35%;
     position: absolute;
-    top: 83px;
-    right: 1rem;
+    top: 15rem;
+    right: 2rem;
   }
 }
 
@@ -201,15 +209,20 @@ a, a:hover, a:focus, a:active {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 @media screen and (min-width: 48rem) {
   .showHeader {
-    font-size: 1.5rem;
-    line-height: 1.375rem;
-    font-weight: 600;
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
-    margin: 0rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 2.25rem;
+    margin-right: 2.25rem;
   }
 }
 
@@ -292,6 +305,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .button {
+  font-family: Avenir Next;
   color: #ffffff;
   font-weight: 700;
   background-color: #323232;
