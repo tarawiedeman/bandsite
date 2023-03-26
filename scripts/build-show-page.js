@@ -33,11 +33,11 @@ const shows = [
 
 }
 ]
-const showsContainer = document.querySelector(".showscontainer");
+const showsContainer = document.querySelector(".shows__container");
 const showHeader = document.createElement("h1");
-showHeader.classList.add("showHeader");
+showHeader.classList.add("shows__header");
 showsContainer.prepend(showHeader);
-document.querySelector(".showHeader").innerText="Shows";
+document.querySelector(".shows__header").innerText="Shows";
 
 
 const showslist=document.createElement("div");
@@ -49,47 +49,47 @@ for (let index = 0; index < shows.length; index++) {
 
 //the showEl or showcard is the element that contains each date, venue, location and button for a show
 const showEl=document.createElement("div");
-showEl.className = "showel";
+showEl.className = "shows__el";
 
 const dateshowcard=document.createElement("div");
-dateshowcard.className="showcard";
+dateshowcard.className="shows__card";
 showEl.append(dateshowcard);
 
 const dateheader=document.createElement("h2")
-dateheader.className="showsubheader";
+dateheader.className="shows__subheader";
 dateheader.innerText="DATE";
 dateshowcard.append(dateheader);
 
 const showdate=document.createElement("h3");
-showdate.className="showdate";
+showdate.className="shows__date";
 showdate.innerText= show.date;
 dateshowcard.append(showdate);
 
 const venueshowcard=document.createElement("div");
-venueshowcard.className="showcard";
+venueshowcard.className="shows__card";
 showEl.append(venueshowcard);
 
 const venueheader=document.createElement("h2")
-venueheader.className="showsubheader";
+venueheader.className="shows__subheader";
 venueheader.innerText="VENUE";
 venueshowcard.append(venueheader);
 
 const showvenue=document.createElement("h3");
-showvenue.className="showvenue";
+showvenue.className="shows__venue";
 showvenue.innerText= show.venue;
 venueshowcard.append(showvenue);
 
 const locationshowcard=document.createElement("div");
-locationshowcard.className="showcard";
+locationshowcard.className="shows__card";
 showEl.append(locationshowcard);
 
 const locationheader=document.createElement("h2")
-locationheader.className="showsubheader";
+locationheader.className="shows__subheader";
 locationheader.innerText="LOCATION";
 locationshowcard.append(locationheader);
 
 const showlocation=document.createElement("h3");
-showlocation.className="showlocation";
+showlocation.className="shows__location";
 showlocation.innerText= show.location;
 locationshowcard.append(showlocation);
 

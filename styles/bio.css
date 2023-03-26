@@ -341,9 +341,14 @@ a, a:hover, a:focus, a:active {
     line-height: 2.75rem;
     font-weight: 700;
     padding-top: 3rem;
-    padding-bottom: 2.25rem;
-    padding-left: 3rem;
+    padding-left: 2.25rem;
     margin: 0rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .commentbox__header {
+    padding-left: 3rem;
+    padding-bottom: 2.25rem;
   }
 }
 .commentbox__namelabel {
@@ -353,6 +358,12 @@ a, a:hover, a:focus, a:active {
   font-weight: 600;
   margin: 0rem;
   padding: 0rem;
+}
+@media screen and (min-width: 48rem) {
+  .commentbox__namelabel {
+    display: flex;
+    align-items: center;
+  }
 }
 .commentbox__nameinput, .commentbox__commentinput {
   font-family: Avenir Next;
@@ -395,15 +406,37 @@ a, a:hover, a:focus, a:active {
 }
 @media screen and (min-width: 48rem) {
   .avatar {
-    max-width: 3rem;
-    margin: 2.25rem;
+    width: 3rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 }
+@media screen and (min-width: 80rem) {
+  .avatar {
+    width: 4rem;
+  }
+}
+
 .form {
   margin: 0rem 1rem;
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 48rem) {
+  .form {
+    margin-bottom: 0rem;
+    margin-top: 2.25rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .form {
+    margin-left: 25rem;
+    margin-right: 25rem;
+  }
+}
+
 .button {
   font-family: Avenir Next;
   color: #ffffff;
@@ -417,13 +450,16 @@ a, a:hover, a:focus, a:active {
 }
 @media screen and (min-width: 48rem) {
   .button {
+    width: 9.37rem;
     margin: 2.25rem 0rem;
     padding: 0.7rem 2rem;
+    display: flex;
+    align-self: flex-end;
   }
 }
 @media screen and (min-width: 80rem) {
   .button {
-    width: 9.375rem;
+    width: 9.2rem;
     margin: 2rem 0rem;
     display: flex;
     align-self: flex-end;
@@ -434,6 +470,20 @@ a, a:hover, a:focus, a:active {
   display: flex;
   flex-direction: column;
   margin: 0rem 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .usercommentContainer {
+    margin-top: 0rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-bottom: 2.25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .usercommentContainer {
+    margin-left: 25rem;
+    margin-right: 25rem;
+  }
 }
 
 .commentcard {
