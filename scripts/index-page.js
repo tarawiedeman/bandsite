@@ -1,4 +1,7 @@
+
+//Create the form to allow for comment inputs
 const commentscontainer = document.querySelector(".commentbox");
+
 const commentsheader = document.createElement("h1");
 commentsheader.classList.add("commentbox__header");
 commentscontainer.prepend(commentsheader);
@@ -45,57 +48,18 @@ commentbutton.className = "button";
 commentbutton.innerText = "COMMENT";
 form.append(commentbutton);
 
-const usercomments = [
-  {
-    name: "Connor Walton",
-    date: "02/17/2021",
-    comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
 
-  {
-    name: "Emilie Beach",
-    date: "01/09/2021",
-    comment:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-
-  {
-    name: "Miles Acosta",
-    date: "12/20/2020",
-    comment:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-];
-
+//Get element where user comments will live 
 const formdata = document.querySelector(".usercommentContainer");
 
-const formlistener = document.querySelector("form");
-formlistener.addEventListener("submit", callbackFunction);
+//Create empty array 
 
-function callbackFunction(e) {
-  e.preventDefault();
-  console.log(e.target.name.value, e.target.comment.value);
-  const commentersname = e.target.name.value;
-  const commenterscomment = e.target.comment.value;
-  const commentersdate = new Date(e.timeStamp).toLocaleDateString("en-UK");
-
-  if (commentersname !== "" && commenterscomment != "") {
-    usercomments.unshift({
-      name: commentersname,
-      comment: commenterscomment,
-      date: commentersdate,
-    });
-    console.log(usercomments);
-    e.target.reset();
-    formdata.innerHTML = "";
-    displayComment();
-  } else {
-    alert("please enter some text");
-  }
-}
-
+const usercomments = [];
+ 
 function displayComment() {
+
+  formdata.innerHTML = ""; // clear the list before appending data to it 
+
   usercomments.forEach((onecomment) => {
     //create a card
     const commentcard = document.createElement("div");
@@ -132,4 +96,74 @@ function displayComment() {
     commentcard.append(usercomment);
   });
 }
-displayComment();
+
+function getComment (){
+
+  axios
+    .get("https://project-1-api.herokuapp.com/comments?api_key=98fa176d-10bd-44e3-8d01-a688ddb725a2")
+    .then((response) => {
+      console.log(response);
+      usercomments=response.data;
+      displayComment();
+      })
+    .catch((error) => {
+      console.log(error);
+      _____.innerText ='Failed to retrieve comments. Please try again later'
+
+})
+}
+
+getComment ();
+
+//POST COMMENTS
+
+
+//create a listener for a form submit
+const formlistener = document.querySelector("form");
+formlistener.addEventListener("submit", callbackFunction);
+
+function callbackFunction(e) {
+  e.preventDefault();
+  console.log(e.target.name.value, e.target.comment.value);
+  // const commentersname = 
+  // const commenterscomment = ;
+  // const commentersdate = ;
+  const newComment = {
+    name:e.target.name.value,
+    comment:e.target.comment.value,
+    date:new Date(e.timeStamp).toLocaleDateString("en-UK")
+  };
+
+  if (commentersname !== "" && commenterscomment != "") {
+//POST IT TO THE API 
+      axios
+      .post("https://project-1-api.herokuapp.com/comments?api_key=98fa176d-10bd-44e3-8d01-a688ddb725a2", newComment)
+      .then ( (response) => {
+        getComment();
+      });
+      .catch( (error) => {
+        console.log(error);
+        _____.innerText ='Failed to capture comment. Please try again later'
+  
+  });
+  console.log(usercomments);
+    e.target.reset();
+    // formdata.innerHTML = "";
+    displayComment();
+  } else {
+    alert("please enter some text");
+  }
+}
+
+    // usercomments.unshift({
+    //   name: commentersname,
+    //   comment: commenterscomment,
+    //   date: commentersdate,
+    // });
+    
+
+
+
+
+
+
