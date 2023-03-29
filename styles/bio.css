@@ -124,7 +124,6 @@ a:active {
     min-height: 45rem;
   }
 }
-
 .hero__header {
   color: #ffffff;
   font-size: 1.5rem;
@@ -160,7 +159,6 @@ a:active {
     padding-right: 5rem;
   }
 }
-
 .bio__header {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -183,7 +181,6 @@ a:active {
 .bio__image {
   width: 100%;
 }
-
 .bio__quote, .bio__quote-author {
   display: flex;
   flex-wrap: wrap;
@@ -207,7 +204,6 @@ a:active {
     width: 80%;
   }
 }
-
 .bio__quote-author {
   padding: 0rem;
   margin: 0rem 1rem;
@@ -238,7 +234,6 @@ a:active {
     margin: 0rem;
   }
 }
-
 .description__container {
   display: flex;
   flex-direction: column;
@@ -249,7 +244,6 @@ a:active {
     flex-direction: row;
   }
 }
-
 .description__body {
   font-size: 0.813rem;
   line-height: 1.125rem;
@@ -277,7 +271,6 @@ a:active {
   display: flex;
   flex-direction: column;
 }
-
 .gallery__header {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -297,7 +290,6 @@ a:active {
     margin: 0rem;
   }
 }
-
 .gallery__images {
   display: flex;
   flex-direction: column;
@@ -313,7 +305,7 @@ a:active {
   .gallery__images {
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0rem 2.25rem;
+    margin: 0rem;
     gap: 1.5rem;
   }
   .gallery__images--sizing {
@@ -551,6 +543,7 @@ a:active {
 }
 .footer__social {
   pointer-events: none;
+  margin-bottom: 1rem;
 }
 .footer__header {
   font-weight: 700;
@@ -564,6 +557,7 @@ a:active {
   font-weight: 700;
   font-size: 0.813rem;
   line-height: 1.125rem;
+  margin: 0rem;
 }
 .footer__contact-copy--reg {
   font-weight: 400;

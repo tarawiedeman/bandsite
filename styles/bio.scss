@@ -109,9 +109,9 @@ a:active {
   @include desktop {
     min-height: 45rem;
   }
-}
 
-.hero__header {
+
+  &__header {
   color: $primary-color-3;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -133,6 +133,7 @@ a:active {
     margin-left: 3rem;
   }
 }
+}
 
 .bio {
   padding-left: 1rem;
@@ -142,9 +143,9 @@ a:active {
     padding-left: 5rem;
     padding-right: 5rem;
   }
-}
 
-.bio__header {
+
+    &__header {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
@@ -166,11 +167,11 @@ a:active {
   }
 }
 
-.bio__image {
+  &__image {
   width: 100%;
 }
 
-.bio__quote {
+  &__quote {
   display: flex;
   flex-wrap: wrap;
   font-size: 0.875rem;
@@ -191,7 +192,7 @@ a:active {
     width: 80%;
   }
 }
-.bio__quote-author {
+  &__quote-author {
   @extend .bio__quote;
   padding: 0rem;
   margin: 0rem 1rem;
@@ -202,8 +203,11 @@ a:active {
     margin: 0rem;
   }
 }
+}
 
-.description__header {
+.description {
+
+  &__header {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
@@ -221,7 +225,7 @@ a:active {
   }
 }
 
-.description__container {
+  &__container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -231,7 +235,7 @@ a:active {
   }
 }
 
-.description__body {
+  &__body {
   font-size: 0.813rem;
   line-height: 1.125rem;
   font-weight: 400;
@@ -252,12 +256,15 @@ a:active {
   }
 }
 
+}
+
+
 .gallery {
   display: flex;
   flex-direction: column;
-}
 
-.gallery__header {
+
+  &__header {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
@@ -276,7 +283,7 @@ a:active {
   }
 }
 
-.gallery__images {
+  &__images {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -291,13 +298,16 @@ a:active {
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0rem 2.25rem;
+    margin: 0rem;
     gap: 1.5rem;
+
+    //I removed margin on tablet/desktop to allow photos to take up more space but I can't do that on mobile without losing the sides
 
     &--sizing {
       width: 25%;
     }
   }
+}
 }
 
 .commentbox {
@@ -528,6 +538,7 @@ a:active {
 
   &__social {
     pointer-events: none;
+    margin-bottom:1rem;
   }
 
   &__header {
@@ -543,6 +554,7 @@ a:active {
     font-weight: 700;
     font-size: 0.813rem;
     line-height: 1.125rem;
+    margin:0rem;
   }
 
   &__contact-copy--reg {
@@ -576,6 +588,7 @@ a:active {
       flex-direction: row;
       margin: 0rem 2.25rem;
     }
+    //I can't modify the names of these containers without messing up my styling, I've tried! 
 
     &__container--2 {
       display: flex;
@@ -583,11 +596,15 @@ a:active {
       gap: 5rem;
       margin: 0rem 2.25rem;
     }
+        //I can't modify the names of these containers without messing up my styling, I've tried! 
+
 
     &__container--rep {
       display: flex;
       flex-direction: column;
     }
+        //I can't modify the names of these containers without messing up my styling, I've tried! 
+
 
     &__header {
       font-weight: 700;

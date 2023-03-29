@@ -126,14 +126,12 @@ a:active {
     position: relative;
   }
 }
-
 .hero__headers-container {
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
 }
-
 .hero__header {
   color: #ffffff;
   font-size: 1.5rem;
@@ -162,7 +160,6 @@ a:active {
     width: 55%;
   }
 }
-
 .hero__subheader {
   color: #ffffff;
   font-size: 0.875rem;
@@ -355,6 +352,7 @@ a:active {
 .footer__icons {
   display: flex;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 .footer__logo {
   max-height: 1.25rem;
@@ -395,6 +393,7 @@ a:active {
     font-weight: 700;
     font-size: 0.875rem;
     line-height: 1.25rem;
+    margin: 0rem;
   }
   .footer__contact-copy--reg {
     font-weight: 400;
