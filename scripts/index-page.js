@@ -54,7 +54,9 @@ const formdata = document.querySelector(".usercommentContainer");
 
 //Create empty array 
 
-const usercomments = [];
+let usercomments = [];
+
+
  
 function displayComment() {
 
@@ -86,11 +88,16 @@ function displayComment() {
     //create a date
     const commentdate = document.createElement("h3");
     commentdate.className = "commentcard__date";
-    commentdate.innerText = onecomment.date;
+    var adjustedDate = new Date (onecomment.timestamp)
+    var month = adjustedDate.getUTCMonth() +1;
+    var day = adjustedDate.getUTCDate();
+    var year = adjustedDate.getUTCFullYear();
+    fullDate= month + "/" + day + "/" + year;
+    commentdate.innerText = fullDate;
     rowcontainer.append(commentdate);
 
     //create a comment
-    const usercomment = document.createElement("p");
+    const usercomment = document.createElement("div");
     usercomment.className = "commentcard__comment";
     usercomment.innerText = onecomment.comment;
     commentcard.append(usercomment);
@@ -104,11 +111,14 @@ function getComment (){
     .then((response) => {
       console.log(response);
       usercomments=response.data;
+      const defaultComments = usercomments.splice(0,3);
+      usercomments = usercomments.reverse();
+      usercomments = usercomments.concat(defaultComments);
       displayComment();
       })
-    .catch((error) => {
+      .catch((error) => {
       console.log(error);
-      _____.innerText ='Failed to retrieve comments. Please try again later'
+      formdata.innerText ='Failed to retrieve comments. Please try again later';
 
 })
 }
@@ -120,46 +130,39 @@ getComment ();
 
 //create a listener for a form submit
 const formlistener = document.querySelector("form");
-formlistener.addEventListener("submit", callbackFunction);
+formlistener.addEventListener("submit", createComment);
 
-function callbackFunction(e) {
+function createComment(e) {
   e.preventDefault();
-  console.log(e.target.name.value, e.target.comment.value);
-  // const commentersname = 
-  // const commenterscomment = ;
-  // const commentersdate = ;
+  // var convertedDate= new Date(e.target.timestamp);
   const newComment = {
     name:e.target.name.value,
     comment:e.target.comment.value,
-    date:new Date(e.timeStamp).toLocaleDateString("en-UK")
+    // date:convertedDate
   };
 
-  if (commentersname !== "" && commenterscomment != "") {
+
+  
 //POST IT TO THE API 
       axios
       .post("https://project-1-api.herokuapp.com/comments?api_key=98fa176d-10bd-44e3-8d01-a688ddb725a2", newComment)
       .then ( (response) => {
         getComment();
-      });
+      })
       .catch( (error) => {
         console.log(error);
-        _____.innerText ='Failed to capture comment. Please try again later'
+        formdata.innerText ='Failed to capture comment. Please try again later'
   
   });
+
   console.log(usercomments);
     e.target.reset();
-    // formdata.innerHTML = "";
+   
     displayComment();
-  } else {
-    alert("please enter some text");
-  }
+ 
 }
 
-    // usercomments.unshift({
-    //   name: commentersname,
-    //   comment: commenterscomment,
-    //   date: commentersdate,
-    // });
+   
     
 
 

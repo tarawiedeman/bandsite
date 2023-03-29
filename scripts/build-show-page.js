@@ -1,50 +1,24 @@
-const shows = [
-  {
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco,CA",
-  },
 
-  {
-    date: "Tue Sept 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francisco, CA ",
-  },
-  {
-    date: "Sat Nov 06 2021 ",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA ",
-  },
-  {
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center ",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 15 2021 ",
-    venue: "Press Club ",
-    location: "San Francisco, CA",
-  },
-];
 const showsContainer = document.querySelector(".shows__container");
 const showHeader = document.createElement("h1");
 showHeader.classList.add("shows__header");
 showsContainer.prepend(showHeader);
 document.querySelector(".shows__header").innerText = "Shows";
 
+
+//create element where shows will display 
 const showslist = document.createElement("div");
 showslist.className = "showslist";
 showsContainer.append(showslist);
 
-for (let index = 0; index < shows.length; index++) {
-  const show = shows[index];
+//create empty array 
+let shows = [];
 
-  //the showEl or showcard is the element that contains each date, venue, location and button for a show
+function displayShows(){
+
+  shows.forEach( (show) => {
+
+    //the showEl or showcard is the element that contains each date, venue, location and button for a show
   const showEl = document.createElement("div");
   showEl.className = "shows__el";
 
@@ -59,7 +33,8 @@ for (let index = 0; index < shows.length; index++) {
 
   const showdate = document.createElement("h3");
   showdate.className = "shows__date";
-  showdate.innerText = show.date;
+  var adjustedDate = new Date (show.date).toDateString();
+  showdate.innerText = adjustedDate;
   dateshowcard.append(showdate);
 
   const venueshowcard = document.createElement("div");
@@ -73,7 +48,7 @@ for (let index = 0; index < shows.length; index++) {
 
   const showvenue = document.createElement("h3");
   showvenue.className = "shows__venue";
-  showvenue.innerText = show.venue;
+  showvenue.innerText = show.place;
   venueshowcard.append(showvenue);
 
   const locationshowcard = document.createElement("div");
@@ -96,8 +71,28 @@ for (let index = 0; index < shows.length; index++) {
   showEl.append(showbutton);
 
   showslist.append(showEl);
+
+  })
+  
 }
 
+function getShows (){
+
+  axios
+    .get("https://project-1-api.herokuapp.com/showdates?api_key=98fa176d-10bd-44e3-8d01-a688ddb725a2")
+    .then((response) => {
+      console.log(response);
+      shows=response.data;
+      displayShows();
+      })
+      .catch((error) => {
+      console.log(error);
+      showslist.innerText ='Failed to retrieve shows. Please try again later';
+
+})
+}
+
+getShows ();
 //create an onclick function to add class that turns showEl grey?
 
 // Object.onclick =
