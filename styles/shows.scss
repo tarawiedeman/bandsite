@@ -225,9 +225,6 @@ a:active {
     background-color: $secondary-color-3;
   }
 
-  &__el:active {
-    background-color: $secondary-color-2;
-  }
 
   &__card {
     flex-direction: column;
@@ -304,6 +301,14 @@ a:active {
     padding-right: 2rem;
     margin: auto 0rem;
   }
+}
+
+.selectedshow{
+  background-color: $secondary-color-2;
+}
+
+.unselectedshow{
+  background-color: $secondary-color-3;
 }
 
 .footer {
