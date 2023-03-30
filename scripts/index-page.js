@@ -26,22 +26,30 @@ namelabel.classList.add("commentbox__namelabel");
 imgrowcontainer.append(namelabel);
 document.querySelector(".commentbox__namelabel").innerText = "NAME";
 
+const namecontainer = document.createElement("div");
+namecontainer.classList.add("commentbox__inputcontainer")
+form.append(namecontainer);
+
 const nameinput = document.createElement("input");
 nameinput.classList.add("commentbox__nameinput");
 nameinput.setAttribute("placeholder", "Enter your name");
 nameinput.setAttribute("name", "name");
-form.append(nameinput);
+namecontainer.append(nameinput);
 
 const commentlabel = document.createElement("label");
 commentlabel.classList.add("commentbox__commentlabel");
 form.append(commentlabel);
 document.querySelector(".commentbox__commentlabel").innerText = "COMMENT";
 
+const commentcontainer = document.createElement("div");
+commentcontainer.classList.add("commentbox__inputcontainer")
+form.append(commentcontainer);
+
 const commentinput = document.createElement("textarea");
 commentinput.classList.add("commentbox__commentinput");
 commentinput.setAttribute("placeholder", "Add a new comment");
 commentinput.setAttribute("name", "comment");
-form.append(commentinput);
+commentcontainer.append(commentinput);
 
 const commentbutton = document.createElement("button");
 commentbutton.className = "button";

@@ -84,6 +84,7 @@ function getShows (){
       console.log(response);
       shows=response.data;
       displayShows();
+      addListener();
       })
       .catch((error) => {
       console.log(error);
@@ -98,26 +99,36 @@ getShows ();
 //the below code is styling the selected shows row 
 
 
-//I want the counter to track clicks
-//>1 click means I need to remove the selected style and apply it to the current clicked element
 
-// let counter =0;
+function addListener(){
 
-// const clickListener = document.querySelectorAll(".showsEl");
-
-// for (let index = 0; index < allShows.length; index++) {
   
-//   clickListener.addEventListener("click", adjustStyles);
+let clickListener = document.querySelectorAll(".shows__el");
+
+for (let index = 0; index < shows.length; index++) {
   
-//   function adjustStyles(){
-//     nameofelementclicked.classList.add(".selectedshow");
-//     console.log("i was clicked", ++counter);
-    
-//     if counter> 1 {
-//       previouselement.classList.add(".unselectedshow");
-//       nameofnewelementclicked.classList.add(".selectedshow");
-//     }
-//   }
+  clickListener[index].addEventListener("click", () => {
+
+    console.log("i was clicked");
+
+    for (let index=0; index <shows.length; index++) {
+      clickListener[index].classList.remove("selectedshow");
+    }
+
+    clickListener[index].classList.add("selectedshow");
+
+  })
+  
+  
+}
+
+}
+
+// function adjustStyles(){
+//   nameofelementclicked.classList.add(".selectedshow");
+//   console.log("i was clicked");
+  
+
 // }
 
 
