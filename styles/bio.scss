@@ -111,7 +111,7 @@ a:active {
   font-weight: 700;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
-  margin: 0rem;
+  margin: 0rem 1rem;
 
   @include tablet {
     font-size: 2.25rem;
@@ -322,12 +322,17 @@ a:active {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 600;
-    margin: 0rem 0.25rem;
+    margin: 0.25rem 2rem;
     padding: 0rem;
 
     @include tablet {
       display: flex;
       align-items: center;
+      margin:0.25rem 3.5rem;
+    }
+
+    @include desktop{
+      margin:0.25rem 3.85rem;
     }
   }
 
@@ -389,23 +394,31 @@ a:active {
 .avatar {
   border-radius: 50%;
   width: 1.8rem;
+  height: 1.8rem;
   background-color: $secondary-color-2;
+  position:absolute;
+  top:2rem;
+  right:14rem;
 
   @include tablet {
-    width: 3rem;
-    margin-right: 0.1rem;
-    margin-bottom: 0.5rem;
+    width: 4rem;
+    height:3.8rem;
+    right:92%;
+    top:1.6rem;
   }
 
   @include desktop {
-    width: 4rem;
+    width: 2.8rem;
+    height:3rem;
     margin-right:0rem;
+    right:93%;
   }
 }
 .form {
   margin: 0rem 3rem;
   display: flex;
   flex-direction: column;
+  position:relative;
 
   @include tablet {
     margin-bottom: 0rem;
@@ -474,6 +487,12 @@ a:active {
   border-color: $secondary-color-2;
   display: flex;
   flex-direction: column;
+  position:relative;
+
+  @include tablet {
+    padding-top:1rem;
+    padding-bottom:1.5rem;
+  }
 
   &__rowcontainer {
     display: flex;
@@ -485,7 +504,16 @@ a:active {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 600;
-    margin-right: 1.5rem;
+    margin-left: 3.8rem;
+    
+    @include tablet{
+      margin-left:4.5rem;
+      margin-bottom:0rem;
+    }
+
+    @include desktop{
+      margin-left:4rem;
+    }
   }
 
   &__date {
@@ -494,25 +522,9 @@ a:active {
     font-weight: 400;
     margin-right: 0rem;
     position:absolute;
-    right:19%;
+    right:1%;
+
   
-    
-    // margin-left:18%;
-    
-    
-
-    @include tablet {
-    position:absolute;
-    right:19%;
-      // margin-left:70%;
-    }
-
-    @include desktop{
-      // margin-left:75%;
-    position:absolute;
-    right:25%;
-
-    }
   }
 
   &__avatar {
@@ -523,17 +535,36 @@ a:active {
     padding: 1rem;
     margin-top: 0.6rem;
     margin-right: 0.6rem;
-    height: 1.8rem;
+    position:absolute;
+
+    
 
     @include tablet {
-      max-width: 3rem;
+      width: 4rem;
+      height:3.8rem;
+      padding:1.9rem;
+      left:0%;
+    }
+
+    @include desktop{
+    width: 2.8rem;
+    height: 3rem;
+    padding:1.5rem;
     }
   }
 
   &__comment {
     @extend .commentcard__name;
     font-weight: 400;
-    margin-left: 2.4rem;
+    margin-left: 3.8rem;
+
+    @include tablet{
+    margin-left: 4.5rem;
+
+    }
+    @include desktop{
+      margin-left:4rem;
+    }
   }
 }
 

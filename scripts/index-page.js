@@ -12,18 +12,14 @@ const form = document.createElement("form");
 form.classList.add("form");
 commentscontainer.append(form);
 
-const imgrowcontainer = document.createElement("div");
-imgrowcontainer.classList.add("commentbox__rowcontainer");
-form.append(imgrowcontainer);
-
 const avatar = document.createElement("img");
 avatar.classList.add("avatar");
 avatar.src = "./assets/images/Mohan-muruge.jpg";
-imgrowcontainer.append(avatar);
+form.append(avatar);
 
 const namelabel = document.createElement("label");
 namelabel.classList.add("commentbox__namelabel");
-imgrowcontainer.append(namelabel);
+form.append(namelabel);
 document.querySelector(".commentbox__namelabel").innerText = "NAME";
 
 const namecontainer = document.createElement("div");
@@ -73,21 +69,25 @@ function displayComment() {
   
 
   usercomments.forEach((onecomment) => {
+
+    
+
     //create a card
     const commentcard = document.createElement("div");
     commentcard.className = "commentcard";
     formdata.append(commentcard);
+
+    //create an avatar
+    const useravatar = document.createElement("img");
+    useravatar.classList.add("commentcard__avatar");
+    useravatar.src = "./assets/images/Mohan-muruge.jpg";
+    commentcard.append(useravatar);
 
     //create a row container
     const rowcontainer = document.createElement("div");
     rowcontainer.className = "commentcard__rowcontainer";
     commentcard.append(rowcontainer);
 
-    //create an avatar
-    const useravatar = document.createElement("img");
-    useravatar.classList.add("commentcard__avatar");
-    useravatar.src = "./assets/images/Mohan-muruge.jpg";
-    rowcontainer.append(useravatar);
 
     //create a name
     const commentersname = document.createElement("h3");
