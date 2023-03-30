@@ -269,11 +269,6 @@ a:active {
   }
 }
 
-@media screen and (min-width: 80rem) {
-  .commentbox {
-    margin: auto;
-  }
-}
 .commentbox__rowcontainer {
   display: flex;
   flex-direction: row;
@@ -338,12 +333,22 @@ a:active {
     padding: 1rem;
   }
 }
+@media screen and (min-width: 80rem) {
+  .commentbox__nameinput, .commentbox__commentinput {
+    margin-left: 4rem;
+  }
+}
 .commentbox__commentlabel {
   color: #afafaf;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
   margin: 0.25rem;
+}
+@media screen and (min-width: 80rem) {
+  .commentbox__commentlabel {
+    margin-left: 4rem;
+  }
 }
 .commentbox__commentinput {
   padding: 0.75rem;
@@ -383,8 +388,8 @@ a:active {
 }
 @media screen and (min-width: 80rem) {
   .form {
-    margin-left: 25rem;
-    margin-right: 25rem;
+    margin-left: 35%;
+    margin-right: 35%;
   }
 }
 
@@ -432,8 +437,8 @@ a:active {
 }
 @media screen and (min-width: 80rem) {
   .usercommentContainer {
-    margin-left: 25rem;
-    margin-right: 25rem;
+    margin-left: 35%;
+    margin-right: 30%;
   }
 }
 
@@ -467,6 +472,11 @@ a:active {
 @media screen and (min-width: 48rem) {
   .commentcard__date {
     margin-left: 30rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .commentcard__date {
+    margin-left: 70%;
   }
 }
 .commentcard__avatar {

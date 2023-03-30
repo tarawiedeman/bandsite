@@ -272,7 +272,7 @@ a:active {
 
 .commentbox {
   @include desktop {
-    margin: auto;
+    
   }
 
   &__rowcontainer {
@@ -337,6 +337,10 @@ a:active {
       height: 3rem;
       padding: 1rem;
     }
+
+    @include desktop{
+      margin-left:4rem;
+    }
   }
 
   &__commentlabel {
@@ -345,6 +349,10 @@ a:active {
     line-height: 1.375rem;
     font-weight: 600;
     margin: 0.25rem;
+
+    @include desktop{
+      margin-left:4rem;
+    }
   }
 
   &__commentinput {
@@ -382,8 +390,8 @@ a:active {
   }
 
   @include desktop {
-    margin-left: 25rem;
-    margin-right: 25rem;
+    margin-left:35%;
+    margin-right:35%;
   }
 }
 
@@ -427,8 +435,8 @@ a:active {
   }
 
   @include desktop {
-    margin-left: 25rem;
-    margin-right: 25rem;
+    margin-left:35%;
+    margin-right:30%;
   }
 }
 .commentcard {
@@ -463,6 +471,10 @@ a:active {
 
     @include tablet {
       margin-left: 30rem;
+    }
+
+    @include desktop{
+      margin-left: 70%;
     }
   }
 
