@@ -37,7 +37,7 @@ commentlabel.classList.add("commentbox__commentlabel");
 form.append(commentlabel);
 document.querySelector(".commentbox__commentlabel").innerText = "COMMENT";
 
-const commentinput = document.createElement("input");
+const commentinput = document.createElement("textarea");
 commentinput.classList.add("commentbox__commentinput");
 commentinput.setAttribute("placeholder", "Add a new comment");
 commentinput.setAttribute("name", "comment");
@@ -61,6 +61,8 @@ let usercomments = [];
 function displayComment() {
 
   formdata.innerHTML = ""; // clear the list before appending data to it 
+
+  
 
   usercomments.forEach((onecomment) => {
     //create a card
