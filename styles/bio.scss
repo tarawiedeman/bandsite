@@ -398,7 +398,7 @@ a:active {
   background-color: $secondary-color-2;
   position:absolute;
   top:2rem;
-  right:14rem;
+  right:100%;
 
   @include tablet {
     width: 4rem;

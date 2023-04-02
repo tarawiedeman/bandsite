@@ -71,11 +71,16 @@ a:active {
 
 
   &__headers-container {
+
+    @include tablet{
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
 }
+
+  
+  }
 
   &__header {
   color: $primary-color-3;
@@ -127,17 +132,17 @@ a:active {
   padding: 1rem;
 
   @include tablet {
-    width: 26%;
+    width: 60%;
     position: absolute;
-    top: 12rem;
-    right: 0rem;
+    left: 2.5%;
+    top: 81%;
   }
 
   @include desktop {
-    width: 35%;
+    width: 40%;
     position: absolute;
-    top: 15rem;
-    right: 2rem;
+    top: 40%;
+    left: 50%;
   }
 }
 
@@ -146,6 +151,58 @@ a:active {
     margin: 0rem 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+
+    @include desktop{
+      margin: 0rem 6rem;
+    }
+  }
+
+  &__headingscontainer{
+
+    display:none;
+    
+    @include tablet{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left:2.25rem;
+    margin-right:29%;
+
+    }
+
+    @include desktop{
+
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    padding-top:3rem;
+    margin-left:16rem;
+    margin-right:17rem;
+
+    }
+  }
+
+  &__headings{
+    display:none;
+
+    @include tablet{
+      display:inherit;
+      color: $primary-color-2;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      font-weight: 600;
+    }
+  }
+
+  &__list{
+
+    @include desktop{
+    margin-top: 2rem;
+    margin-bottom:2rem;
+    margin-left: 18rem;
+    margin-right:5rem;
+    }
   }
 
   &__header {
@@ -153,11 +210,12 @@ a:active {
     line-height: 2rem;
     font-weight: 700;
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0rem;
     margin-left: 1rem;
     margin-right: 1rem;
 
     @include tablet {
+      
       font-size: 2.25rem;
       line-height: 2.75rem;
       font-weight: 700;
@@ -165,6 +223,10 @@ a:active {
       margin-bottom: 3rem;
       margin-left: 2.25rem;
       margin-right: 2.25rem;
+    }
+
+    @include desktop {
+      float:left;
     }
   }
 
@@ -178,7 +240,14 @@ a:active {
 
     @include tablet {
       flex-direction: row;
+      justify-content:space-around;
+      align-items:center;
       padding: 1.5rem 1.125rem;
+     
+    }
+
+    @include desktop {
+      gap:4.5rem;
     }
   }
 
@@ -191,7 +260,7 @@ a:active {
     flex-direction: column;
 
     @include tablet {
-      margin: 2.25rem;
+      // padding: 0rem 2rem;
     }
 
     @include desktop {
@@ -204,6 +273,10 @@ a:active {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 600;
+
+    @include tablet {
+      display:none;
+    }
   }
 
   &__date {
@@ -213,7 +286,7 @@ a:active {
     margin: 0rem;
 
     @include tablet {
-      margin: 2.25rem;
+      margin: 0rem;
     }
 
     @include desktop {
@@ -228,7 +301,7 @@ a:active {
     margin: 0rem;
 
     @include tablet {
-      margin: 0rem 3rem;
+      margin: 0rem;
     }
 
     @include desktop {
@@ -253,13 +326,15 @@ a:active {
   margin: 1rem 0rem;
 
   @include tablet {
-    margin: 2.25rem 0rem;
-  }
-
-  @include desktop {
+    margin: 0rem;
     width: 9.375rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    
+  }
+
+  @include desktop {
+
     margin: auto 0rem;
   }
 }

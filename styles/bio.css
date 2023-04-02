@@ -387,7 +387,7 @@ a:active {
   background-color: #e1e1e1;
   position: absolute;
   top: 2rem;
-  right: 14rem;
+  right: 100%;
 }
 @media screen and (min-width: 48rem) {
   .avatar {

@@ -82,11 +82,13 @@ a:active {
     position: relative;
   }
 }
-.hero__headers-container {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
+@media screen and (min-width: 48rem) {
+  .hero__headers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+  }
 }
 .hero__header {
   color: #ffffff;
@@ -140,18 +142,18 @@ a:active {
 }
 @media screen and (min-width: 48rem) {
   .iframe {
-    width: 26%;
+    width: 60%;
     position: absolute;
-    top: 12rem;
-    right: 0rem;
+    left: 2.5%;
+    top: 81%;
   }
 }
 @media screen and (min-width: 80rem) {
   .iframe {
-    width: 35%;
+    width: 40%;
     position: absolute;
-    top: 15rem;
-    right: 2rem;
+    top: 40%;
+    left: 50%;
   }
 }
 
@@ -160,12 +162,59 @@ a:active {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 80rem) {
+  .shows__container {
+    margin: 0rem 6rem;
+  }
+}
+.shows__headingscontainer {
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .shows__headingscontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 2.25rem;
+    margin-right: 29%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .shows__headingscontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 3rem;
+    margin-left: 16rem;
+    margin-right: 17rem;
+  }
+}
+.shows__headings {
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .shows__headings {
+    display: inherit;
+    color: #afafaf;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .shows__list {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 18rem;
+    margin-right: 5rem;
+  }
+}
 .shows__header {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -180,6 +229,11 @@ a:active {
     margin-right: 2.25rem;
   }
 }
+@media screen and (min-width: 80rem) {
+  .shows__header {
+    float: left;
+  }
+}
 .shows__el {
   padding: 1rem;
   border-bottom: 0.15rem;
@@ -191,7 +245,14 @@ a:active {
 @media screen and (min-width: 48rem) {
   .shows__el {
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     padding: 1.5rem 1.125rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .shows__el {
+    gap: 4.5rem;
   }
 }
 .shows__el:hover {
@@ -199,11 +260,6 @@ a:active {
 }
 .shows__card {
   flex-direction: column;
-}
-@media screen and (min-width: 48rem) {
-  .shows__card {
-    margin: 2.25rem;
-  }
 }
 @media screen and (min-width: 80rem) {
   .shows__card {
@@ -216,6 +272,11 @@ a:active {
   line-height: 1.375rem;
   font-weight: 600;
 }
+@media screen and (min-width: 48rem) {
+  .shows__subheader {
+    display: none;
+  }
+}
 .shows__date {
   font-size: 0.813rem;
   line-height: 1.125rem;
@@ -224,7 +285,7 @@ a:active {
 }
 @media screen and (min-width: 48rem) {
   .shows__date {
-    margin: 2.25rem;
+    margin: 0rem;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -240,7 +301,7 @@ a:active {
 }
 @media screen and (min-width: 48rem) {
   .shows__venue, .shows__location {
-    margin: 0rem 3rem;
+    margin: 0rem;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -261,14 +322,14 @@ a:active {
 }
 @media screen and (min-width: 48rem) {
   .button {
-    margin: 2.25rem 0rem;
+    margin: 0rem;
+    width: 9.375rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 @media screen and (min-width: 80rem) {
   .button {
-    width: 9.375rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
     margin: auto 0rem;
   }
 }

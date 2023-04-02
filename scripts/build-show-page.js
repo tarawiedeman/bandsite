@@ -5,10 +5,31 @@ showHeader.classList.add("shows__header");
 showsContainer.prepend(showHeader);
 document.querySelector(".shows__header").innerText = "Shows";
 
+const showHeadingsContainer = document.createElement("div");
+showHeadingsContainer.classList.add("shows__headingscontainer");
+showsContainer.append(showHeadingsContainer);
+
+const showHeadingsDate = document.createElement("h2");
+showHeadingsDate.className = "shows__headings";
+showHeadingsDate.innerText = "DATE";
+showHeadingsContainer.append(showHeadingsDate);
+
+const showHeadingsVenue = document.createElement("h2");
+showHeadingsVenue.className = "shows__headings";
+showHeadingsVenue.innerText = "VENUE";
+showHeadingsContainer.append(showHeadingsVenue);
+
+const showHeadingsLocation = document.createElement("h2");
+showHeadingsLocation.className = "shows__headings";
+showHeadingsLocation.innerText = "LOCATION";
+showHeadingsContainer.append(showHeadingsLocation);
+
+
+
 
 //create element where shows will display 
 const showslist = document.createElement("div");
-showslist.className = "showslist";
+showslist.className = "shows__list";
 showsContainer.append(showslist);
 
 //create empty array 
@@ -124,12 +145,7 @@ for (let index = 0; index < shows.length; index++) {
 
 }
 
-// function adjustStyles(){
-//   nameofelementclicked.classList.add(".selectedshow");
-//   console.log("i was clicked");
-  
 
-// }
 
 
 
