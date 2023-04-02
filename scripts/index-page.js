@@ -1,4 +1,3 @@
-
 //Create the form to allow for comment inputs
 const commentscontainer = document.querySelector(".commentbox");
 
@@ -23,7 +22,7 @@ form.append(namelabel);
 document.querySelector(".commentbox__namelabel").innerText = "NAME";
 
 const namecontainer = document.createElement("div");
-namecontainer.classList.add("commentbox__inputcontainer")
+namecontainer.classList.add("commentbox__inputcontainer");
 form.append(namecontainer);
 
 const nameinput = document.createElement("input");
@@ -38,7 +37,7 @@ form.append(commentlabel);
 document.querySelector(".commentbox__commentlabel").innerText = "COMMENT";
 
 const commentcontainer = document.createElement("div");
-commentcontainer.classList.add("commentbox__inputcontainer")
+commentcontainer.classList.add("commentbox__inputcontainer");
 form.append(commentcontainer);
 
 const commentinput = document.createElement("textarea");
@@ -52,26 +51,17 @@ commentbutton.className = "button";
 commentbutton.innerText = "COMMENT";
 form.append(commentbutton);
 
-
-//Get element where user comments will live 
+//Get element where user comments will live
 const formdata = document.querySelector(".usercommentContainer");
 
-//Create empty array 
+//Create empty array
 
 let usercomments = [];
 
-
- 
 function displayComment() {
-
-  formdata.innerHTML = ""; // clear the list before appending data to it 
-
-  
+  formdata.innerHTML = ""; // clear the list before appending data to it
 
   usercomments.forEach((onecomment) => {
-
-    
-
     //create a card
     const commentcard = document.createElement("div");
     commentcard.className = "commentcard";
@@ -88,7 +78,6 @@ function displayComment() {
     rowcontainer.className = "commentcard__rowcontainer";
     commentcard.append(rowcontainer);
 
-
     //create a name
     const commentersname = document.createElement("h3");
     commentersname.className = "commentcard__name";
@@ -98,11 +87,11 @@ function displayComment() {
     //create a date
     const commentdate = document.createElement("h3");
     commentdate.className = "commentcard__date";
-    var adjustedDate = new Date (onecomment.timestamp)
-    var month = adjustedDate.getUTCMonth() +1;
+    var adjustedDate = new Date(onecomment.timestamp);
+    var month = adjustedDate.getUTCMonth() + 1;
     var day = adjustedDate.getUTCDate();
     var year = adjustedDate.getUTCFullYear();
-    fullDate= month + "/" + day + "/" + year;
+    fullDate = month + "/" + day + "/" + year;
     commentdate.innerText = fullDate;
     rowcontainer.append(commentdate);
 
@@ -114,29 +103,29 @@ function displayComment() {
   });
 }
 
-function getComment (){
-
+function getComment() {
   axios
-    .get("https://project-1-api.herokuapp.com/comments?api_key=98fa176d-10bd-44e3-8d01-a688ddb725a2")
+    .get(
+      "https://project-1-api.herokuapp.com/comments?api_key=98fa176d-10bd-44e3-8d01-a688ddb725a2"
+    )
     .then((response) => {
       console.log(response);
-      usercomments=response.data;
-      const defaultComments = usercomments.splice(0,3);
+      usercomments = response.data;
+      const defaultComments = usercomments.splice(0, 3);
       usercomments = usercomments.reverse();
       usercomments = usercomments.concat(defaultComments);
       displayComment();
-      })
-      .catch((error) => {
+    })
+    .catch((error) => {
       console.log(error);
-      formdata.innerText ='Failed to retrieve comments. Please try again later';
-
-})
+      formdata.innerText =
+        "Failed to retrieve comments. Please try again later";
+    });
 }
 
-getComment ();
+getComment();
 
 //POST COMMENTS
-
 
 //create a listener for a form submit
 const formlistener = document.querySelector("form");
@@ -146,37 +135,27 @@ function createComment(e) {
   e.preventDefault();
   // var convertedDate= new Date(e.target.timestamp);
   const newComment = {
-    name:e.target.name.value,
-    comment:e.target.comment.value,
+    name: e.target.name.value,
+    comment: e.target.comment.value,
     // date:convertedDate
   };
 
-
-  
-//POST IT TO THE API 
-      axios
-      .post("https://project-1-api.herokuapp.com/comments?api_key=98fa176d-10bd-44e3-8d01-a688ddb725a2", newComment)
-      .then ( (response) => {
-        getComment();
-      })
-      .catch( (error) => {
-        console.log(error);
-        formdata.innerText ='Failed to capture comment. Please try again later'
-  
-  });
+  //POST IT TO THE API
+  axios
+    .post(
+      "https://project-1-api.herokuapp.com/comments?api_key=98fa176d-10bd-44e3-8d01-a688ddb725a2",
+      newComment
+    )
+    .then((response) => {
+      getComment();
+    })
+    .catch((error) => {
+      console.log(error);
+      formdata.innerText = "Failed to capture comment. Please try again later";
+    });
 
   console.log(usercomments);
-    e.target.reset();
-   
-    displayComment();
- 
+  e.target.reset();
+
+  displayComment();
 }
-
-   
-    
-
-
-
-
-
-

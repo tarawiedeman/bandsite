@@ -70,29 +70,28 @@ a:active {
     min-height: 45rem;
   }
 
-
   &__header {
-  color: $primary-color-3;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  margin: 0rem 1rem;
-  align-self: center;
+    color: $primary-color-3;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    margin: 0rem 1rem;
+    align-self: center;
 
-  @include tablet {
-    font-size: 3.75rem;
-    line-height: 4.25rem;
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
-    margin: 0rem 2.25rem;
-  }
+    @include tablet {
+      font-size: 3.75rem;
+      line-height: 4.25rem;
+      padding-top: 3rem;
+      padding-bottom: 2.25rem;
+      margin: 0rem 2.25rem;
+    }
 
-  @include desktop {
-    margin-left: 3rem;
+    @include desktop {
+      margin-left: 3rem;
+    }
   }
-}
 }
 
 .bio {
@@ -104,194 +103,185 @@ a:active {
     padding-right: 5rem;
   }
 
-
-    &__header {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  margin: 0rem 1rem;
-
-  @include tablet {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 700;
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
-    margin: 0rem;
-    padding-left: 3rem;
-  }
-
-  @include desktop {
-  }
-}
-
-  &__image {
-  width: 100%;
-}
-
-  &__quote {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
-  padding: 1rem 0rem;
-  margin: 0rem;
-
-  @include tablet {
+  &__header {
     font-size: 1.5rem;
     line-height: 2rem;
-    padding: 2.25rem 0rem;
-    margin: 0rem;
+    font-weight: 700;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    margin: 0rem 1rem;
+
+    @include tablet {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      font-weight: 700;
+      padding-top: 3rem;
+      padding-bottom: 2.25rem;
+      margin: 0rem;
+      padding-left: 3rem;
+    }
+
+    @include desktop {
+    }
+  }
+
+  &__image {
     width: 100%;
   }
 
-  @include desktop {
-    width: 80%;
-  }
-}
-  &__quote-author {
-  @extend .bio__quote;
-  padding: 0rem;
-  margin: 0rem 1rem;
-
-  @include tablet {
-    font-size: 0.75rem;
-    line-height: 2rem;
+  &__quote {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    padding: 1rem 0rem;
     margin: 0rem;
+
+    @include tablet {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      padding: 2.25rem 0rem;
+      margin: 0rem;
+      width: 100%;
+    }
+
+    @include desktop {
+      width: 80%;
+    }
   }
-}
+  &__quote-author {
+    @extend .bio__quote;
+    padding: 0rem;
+    margin: 0rem 1rem;
+
+    @include tablet {
+      font-size: 0.75rem;
+      line-height: 2rem;
+      margin: 0rem;
+    }
+  }
 }
 
 .description {
-
   &__header {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  margin: 0rem 1rem;
-
-  @include tablet {
-    font-size: 1.5rem;
-    line-height: 1.375rem;
-    font-weight: 600;
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
-    margin: 0rem;
-  }
-}
-
-  &__container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-
-  @include tablet {
-    flex-direction: row;
-  }
-}
-
-  &__body {
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  margin: 0rem 1rem;
-  padding-bottom: 1rem;
-
-  @include tablet {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    width: 50%;
-    margin: 0rem;
-    padding-bottom: 2.25rem;
-    padding-right: 2.25rem;
+    font-weight: 600;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    margin: 0rem 1rem;
+
+    @include tablet {
+      font-size: 1.5rem;
+      line-height: 1.375rem;
+      font-weight: 600;
+      padding-top: 3rem;
+      padding-bottom: 2.25rem;
+      margin: 0rem;
+    }
   }
 
-  @include desktop {
-    width: 50%;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__body {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    margin: 0rem 1rem;
+    padding-bottom: 1rem;
+
+    @include tablet {
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      width: 50%;
+      margin: 0rem;
+      padding-bottom: 2.25rem;
+      padding-right: 2.25rem;
+    }
+
+    @include desktop {
+      width: 50%;
+    }
   }
 }
-
-}
-
 
 .gallery {
   display: flex;
   flex-direction: column;
 
-
   &__header {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  padding-top: 0rem;
-  padding-bottom: 1rem;
-  margin: 0rem 1rem;
-
-  @include tablet {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 700;
     padding-top: 0rem;
-    padding-bottom: 2.25rem;
-    padding-left: 3rem;
-    margin: 0rem;
-  }
-}
+    padding-bottom: 1rem;
+    margin: 0rem 1rem;
 
-  &__images {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0rem 1rem;
-  gap: 1rem;
-
-  &--sizing {
-    width: 100%;
-  }
-
-  @include tablet {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0rem;
-    gap: 1.5rem;
-
-    //I removed margin on tablet/desktop to allow photos to take up more space but I can't do that on mobile without losing the sides
-
-    &--sizing {
-      width: 25%;
+    @include tablet {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      font-weight: 700;
+      padding-top: 0rem;
+      padding-bottom: 2.25rem;
+      padding-left: 3rem;
+      margin: 0rem;
     }
   }
-}
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0rem 1rem;
+    gap: 1rem;
+
+    &--sizing {
+      width: 100%;
+    }
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0rem;
+      gap: 1.5rem;
+
+      //I removed margin on tablet/desktop to allow photos to take up more space but I can't do that on mobile without losing the sides
+
+      &--sizing {
+        width: 25%;
+      }
+    }
+  }
 }
 
 .commentbox {
   @include desktop {
-    
   }
 
   &__rowcontainer {
     display: flex;
     flex-direction: row;
-    position:relative;
-    
+    position: relative;
   }
 
-  &__inputcontainer{
-
-    @include tablet{
-      margin-right:12%;
+  &__inputcontainer {
+    @include tablet {
+      margin-right: 12%;
     }
 
-    @include desktop{
-      margin-right:10%;
+    @include desktop {
+      margin-right: 10%;
     }
-
   }
 
   &__header {
@@ -328,11 +318,11 @@ a:active {
     @include tablet {
       display: flex;
       align-items: center;
-      margin:0.25rem 3.5rem;
+      margin: 0.25rem 3.5rem;
     }
 
-    @include desktop{
-      margin:0.25rem 3.85rem;
+    @include desktop {
+      margin: 0.25rem 3.85rem;
     }
   }
 
@@ -348,7 +338,7 @@ a:active {
     border-style: solid;
     background-color: $secondary-color-3;
     margin-bottom: 1rem;
-    margin-left:2rem;
+    margin-left: 2rem;
     padding: 0.75rem;
     height: 2.25rem;
     width: 100%;
@@ -356,12 +346,11 @@ a:active {
     @include tablet {
       height: 3rem;
       padding: 1rem;
-      margin-left:3.5rem;
-  
+      margin-left: 3.5rem;
     }
 
-    @include desktop{
-      margin-left:4rem;
+    @include desktop {
+      margin-left: 4rem;
     }
   }
 
@@ -372,12 +361,12 @@ a:active {
     font-weight: 600;
     margin: 0.25rem 2rem;
 
-    @include tablet{
-      margin-left:3.5rem;
+    @include tablet {
+      margin-left: 3.5rem;
     }
 
-    @include desktop{
-      margin-left:4rem;
+    @include desktop {
+      margin-left: 4rem;
     }
   }
 
@@ -385,9 +374,7 @@ a:active {
     @extend .commentbox__nameinput;
     padding: 0.75rem;
     text-align: start;
-    margin-bottom:0rem;
-
-
+    margin-bottom: 0rem;
   }
 }
 
@@ -396,29 +383,29 @@ a:active {
   width: 1.8rem;
   height: 1.8rem;
   background-color: $secondary-color-2;
-  position:absolute;
-  top:2rem;
-  right:100%;
+  position: absolute;
+  top: 2rem;
+  right: 100%;
 
   @include tablet {
     width: 4rem;
-    height:3.8rem;
-    right:92%;
-    top:1.6rem;
+    height: 3.8rem;
+    right: 92%;
+    top: 1.6rem;
   }
 
   @include desktop {
     width: 2.8rem;
-    height:3rem;
-    margin-right:0rem;
-    right:93%;
+    height: 3rem;
+    margin-right: 0rem;
+    right: 93%;
   }
 }
 .form {
   margin: 0rem 3rem;
   display: flex;
   flex-direction: column;
-  position:relative;
+  position: relative;
 
   @include tablet {
     margin-bottom: 0rem;
@@ -428,8 +415,8 @@ a:active {
   }
 
   @include desktop {
-    margin-left:25%;
-    margin-right:25%;
+    margin-left: 25%;
+    margin-right: 25%;
   }
 }
 
@@ -474,8 +461,8 @@ a:active {
   }
 
   @include desktop {
-    margin-left:25%;
-    margin-right:25%;
+    margin-left: 25%;
+    margin-right: 25%;
   }
 }
 .commentcard {
@@ -487,11 +474,11 @@ a:active {
   border-color: $secondary-color-2;
   display: flex;
   flex-direction: column;
-  position:relative;
+  position: relative;
 
   @include tablet {
-    padding-top:1rem;
-    padding-bottom:1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
   }
 
   &__rowcontainer {
@@ -505,14 +492,14 @@ a:active {
     line-height: 1.375rem;
     font-weight: 600;
     margin-left: 3.8rem;
-    
-    @include tablet{
-      margin-left:4.5rem;
-      margin-bottom:0rem;
+
+    @include tablet {
+      margin-left: 4.5rem;
+      margin-bottom: 0rem;
     }
 
-    @include desktop{
-      margin-left:4rem;
+    @include desktop {
+      margin-left: 4rem;
     }
   }
 
@@ -521,10 +508,8 @@ a:active {
     color: $primary-color-2;
     font-weight: 400;
     margin-right: 0rem;
-    position:absolute;
-    right:1%;
-
-  
+    position: absolute;
+    right: 1%;
   }
 
   &__avatar {
@@ -535,21 +520,19 @@ a:active {
     padding: 1rem;
     margin-top: 0.6rem;
     margin-right: 0.6rem;
-    position:absolute;
-
-    
+    position: absolute;
 
     @include tablet {
       width: 4rem;
-      height:3.8rem;
-      padding:1.9rem;
-      left:0%;
+      height: 3.8rem;
+      padding: 1.9rem;
+      left: 0%;
     }
 
-    @include desktop{
-    width: 2.8rem;
-    height: 3rem;
-    padding:1.5rem;
+    @include desktop {
+      width: 2.8rem;
+      height: 3rem;
+      padding: 1.5rem;
     }
   }
 
@@ -558,13 +541,11 @@ a:active {
     font-weight: 400;
     margin-left: 3.8rem;
 
-    @include tablet{
-    margin-left: 4.5rem;
-
+    @include tablet {
+      margin-left: 4.5rem;
     }
-    @include desktop{
-      margin-left:4rem;
+    @include desktop {
+      margin-left: 4rem;
     }
   }
 }
-
